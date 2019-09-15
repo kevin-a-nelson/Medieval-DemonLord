@@ -111,10 +111,12 @@ class GUI:
 
         def DeathCheck():
             if self.victory == True:
-                changeBackground(self.victory)
+                changeBackground(self.VICTORY)
             if self.game.Player.dead == True:
                 if self.victory == True:
-                    changeBackground(self.victory)
+                    self.console['text'] += "\n\nQuit and reopen the file to play again"
+                    self.window.bind("y",end)
+                    self.window.bind("n",end)
                 else:
                     changeBackground(self.death)
                     self.f1b1['command'] = lambda:unbind2()
@@ -610,7 +612,7 @@ What would you like to train?
                     self.game.Combats.baal = True
                 if self.game.Temp2.defense == self.game.Hero.defense or self.game.Temp2.defense == self.game.Hero.defense*5 - weaken/1000:
                     self.victory = True
-                    changeBackground(self.heroPic)
+                    changeBackground(self.VICTORY)
                     self.console['text'] = "You have defeated the hero in place of your father!\nBut he was only the first of many...\nHow long will your legacy continue?\n\nThe end?"
                     self.game.Player.dead = True
                     DeathCheck()
@@ -717,7 +719,7 @@ What would you like to train?
         self.baalPic = [self.baal]
         self.craftPic = [self.Craft]
         self.heroPic = [self.hero]
-        self.victory = [self.end]
+        self.VICTORY = [self.end]
         self.death = [self.end2]
         self.startPic = [self.start]
         self.hunt = [self.hunt1,self.hunt2,self.hunt3,self.hunt4]
