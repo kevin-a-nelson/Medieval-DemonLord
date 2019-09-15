@@ -7,5 +7,5 @@ What I learned
   - Designing Intuitive GUI
 
 How to Play
-  - Git clone https://github.com/SamuraiViking/Medieval-DemonLord/
+  - Git clone https://github.com/SamuraiViking/Medieval-DemonLord.git
   - python3 MedievalDemonLord.py
