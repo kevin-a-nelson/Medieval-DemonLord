@@ -7,5 +7,7 @@ What I learned
   - Designing Intuitive GUI
 
 How to Play
-  ``` git clone https://github.com/SamuraiViking/Medieval-DemonLord.git ```
-  ``` python3 MedievalDemonLord.py ```
+```
+git clone https://github.com/SamuraiViking/Medieval-DemonLord.git
+python3 MedievalDemonLord.py
+```
